@@ -51,7 +51,7 @@ test('results:all triggers results:focus on the first item', function (assert) {
   var $parent = $('<div></div>');
 
   var $container = $('<span></span>');
-  var container = new MockContainer();
+  var container = new MockContainer({isOpen: true});
 
   $parent.appendTo($('#qunit-fixture'));
   $select.appendTo($parent);
@@ -146,7 +146,7 @@ test('scrollAfterSelect triggers results:focus', function (assert) {
   var $parent = $('<div></div>');
 
   var $container = $('<span></span>');
-  var container = new MockContainer();
+  var container = new MockContainer({isOpen: true});
 
   $parent.appendTo($('#qunit-fixture'));
   $select.appendTo($parent);

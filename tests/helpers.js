@@ -7,14 +7,30 @@ jQuery.noConflict();
 
 var Utils = require('select2/utils');
 
-function MockContainer () {
+function MockContainer (options) {
+  var self = this;
+  options || (options = {});
+  self._isOpen = options.isOpen;
+
   MockContainer.__super__.constructor.call(this);
+
+  this.on('open', function () {
+    self._isOpen = true;
+  });
+
+  this.on('close', function () {
+    self._isOpen = false;
+  });
+
+  this.on('toggle', function () {
+    self._isOpen = !self._isOpen;
+  });
 }
 
 Utils.Extend(MockContainer, Utils.Observable);
 
 MockContainer.prototype.isOpen = function () {
-  return this.isOpen;
+  return this._isOpen;
 };
 
 var log = [];
