@@ -12,7 +12,6 @@ module.exports = function (grunt) {
   fullIncludes = [
     'jquery',
 
-    'select2/compat/matcher',
     'select2/compat/query',
 
     'select2/dropdown/attachContainer',
