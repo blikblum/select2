@@ -165,19 +165,6 @@ define([
         );
       }
 
-      if (
-        options.dropdownCssClass != null ||
-        options.dropdownCss != null ||
-        options.adaptDropdownCssClass != null
-      ) {
-        var DropdownCSS = require(options.amdBase + 'compat/dropdownCss');
-
-        options.dropdownAdapter = Utils.Decorate(
-          options.dropdownAdapter,
-          DropdownCSS
-        );
-      }
-
       options.dropdownAdapter = Utils.Decorate(
         options.dropdownAdapter,
         AttachBody
