@@ -1,8 +1,15 @@
-Select2
-=======
-[![Build Status][travis-ci-image]][travis-ci-status]
-[![cdnjs](https://img.shields.io/cdnjs/v/select2.svg)][cdnjs]
-[![jsdelivr](https://data.jsdelivr.com/v1/package/npm/select2/badge)][jsdelivr]
+Select2 Lite
+============
+
+> Select2 Lite (select2-lite package) removes support for IE < 11 and old / deprecated code
+> 
+
+* Changes to upstream
+  * Remove jquery1 bugs workarounds (tests still passes with jquery-1.12.4)
+  * Remove Mutation Events API usage
+  * Remove select2 v3 compatibility layer
+
+---
 
 Select2 is a jQuery-based replacement for select boxes. It supports searching,
 remote data sets, and pagination of results.
@@ -27,7 +34,7 @@ Use cases
 
 Browser compatibility
 ---------------------
-* IE 8+
+* IE 11
 * Chrome 8+
 * Firefox 10+
 * Safari 3+
