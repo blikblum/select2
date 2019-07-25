@@ -108,12 +108,6 @@ define([
       }
     }
 
-    // Prefer the element's `dataset` attribute if it exists
-    // jQuery 1.x does not correctly handle data attributes with multiple dashes
-    if ($.fn.jquery && $.fn.jquery.substr(0, 2) == '1.' && $e[0].dataset) {
-      dataset = $.extend(true, {}, $e[0].dataset, dataset);
-    }
-
     // Prefer our internal data cache if it exists
     var data = $.extend(true, {}, Utils.GetData($e[0]), dataset);
 
