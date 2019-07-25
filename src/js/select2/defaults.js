@@ -213,19 +213,6 @@ define([
         );
       }
 
-      if (
-        options.containerCssClass != null ||
-        options.containerCss != null ||
-        options.adaptContainerCssClass != null
-      ) {
-        var ContainerCSS = require(options.amdBase + 'compat/containerCss');
-
-        options.selectionAdapter = Utils.Decorate(
-          options.selectionAdapter,
-          ContainerCSS
-        );
-      }
-
       options.selectionAdapter = Utils.Decorate(
         options.selectionAdapter,
         EventRelay
